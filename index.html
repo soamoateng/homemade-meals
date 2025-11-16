@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homemade Meals by Eledi - Your Weekly Nutritious Meal Planner & Food Ordering web App</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Homemade Meals by Eledi</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#categories">Meals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team">Our Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">FAQs</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-primary ms-lg-3" data-bs-toggle="modal" data-bs-target="#authModal">
+                            Login / Sign Up
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+        <main data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-smooth-scroll="true" tabindex="0">
+        
+        <section id="hero" class="text-center bg-light">
+            <div class="container">
+                <h1 class="display-3 fw-bold">Meal Planning Made Simple.</h1>
+                <p class="lead mb-4">Plan your weekly meals using our drag-and-drop feature and then order chef-prepared meals delivered right to your door.</p>
+                <button class="btn btn-lg btn-primary" data-bs-toggle="modal" data-bs-target="#authModal">
+                    Order affordable weekly meals
+                </button>
+            </div>
+        </section>
+
+        <section id="categories" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5 fw-bold">Our Available Meal Categories</h2>
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img class="card-img-top" style="width:360px;  height:280px; object-fit: cover" src="img/breakfast.png" alt="img/breakfast.png">
+                             <div class="card-body">
+                                <h4 class="card-title">Breakfast</h4>
+                                <p class="card-text">We offer a reliable start to your day with breakfasts that fuel you from sunrise to your first meeting. Our menu makes healthy eating easy and enjoyable.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img class="card-img-top" style="width:360px;  height:280px; object-fit: cover" src="img/lunch.png" alt="lunch.png">
+                             <div class="card-body">
+                                <h4 class="card-title">Lunch</h4>
+                                <p class="card-text">We deliver energizing lunches to help you stay productive through the afternoon. Let your mealtime be a low-effort part of your routine.</p>
+                            </div>
+                        </div>>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img class="card-img-top" style="width:360px;  height:280px; object-fit: cover" src="img/supper.png" alt="supper.png">
+                             <div class="card-body">
+                                <h4 class="card-title">Supper</h4>
+                                <p class="card-text">We serve delicious suppers designed for unwinding after a busy day. Our weekly menu features meals that balance between wholesome and nourishment.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="team" class="bg-white">
+            <div class="container text-center">
+                <h2 class="mb-5 fw-bold">The Team Behind Our Meals</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-4">
+                       <div class="card" style="width:320px">
+                            <img class="card-img-top" src="img/jennifer-bour.png" alt="jennifer-bour.png" style="width:100%">
+                             <div class="card-body">
+                                <h4 class="card-title">Jennifer Bour</h4>
+                                <p class="card-text">Head Chef</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" style="width:320px">
+                            <img class="card-img-top" src="img/helen-bour.png" alt="helen-bour.png" style="width:100%">
+                             <div class="card-body">
+                                <h4 class="card-title">Helen Bour</h4>
+                                <p class="card-text">Nutritionist</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="bg-light">
+            <div class="container">
+                <h2 class="text-center mb-5 fw-bold">Frequently Asked Questions</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="accordion" id="faqAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        How does the meal planning feature work?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Users can drag meals from our menu meal categories like breakfast, lunch and supper onto a weekly calendar, then they order the meals to be delivered daily for the week. The app automatically calculates your estimated weekly total calories.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Can I order the meals directly from the web app?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Yes. After you create your weekly meal plan, you can purchase chef-prepared meals in bulk directly through the integrated cart on your dashboard.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        How do I review and edit my weekly meal plan before ordering?
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        You can save your weekly meal plan as a draft, review it and swap meals to adjust the weekly total calories before finalizing the order.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+           
+            <div class="social-links">
+                <a href="https://instagram.com/homemade_meals25" class="text-white mx-2">Instagram</a> | 
+                <a href="https://www.tiktok.com/@homemade_meals25" class="text-white mx-2">TikTok</a> | 
+                <a href="https://www.snapchat.com/add/homemade_meals" class="text-white mx-2">Snapchat</a> |  
+                <a href="https://wa.me/233536298793" class="text-white mx-2">WhatsApp</a>
+            </div>
+            <div>
+                <p>&copy; 2025 Homemade Meals by Eledi All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="authModalLabel">Access Your Account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-tabs mb-3" id="authTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab" aria-controls="login" aria-selected="true">Login</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="signup-tab" data-bs-toggle="tab" data-bs-target="#signup" type="button" role="tab" aria-controls="signup" aria-selected="false">Sign Up</button>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content" id="authTabContent">
+                        <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                            <form id="login-form-modal">
+                                <div class="mb-3">
+                                    <label for="login-role" class="form-label">Account Type</label>
+                                    <select class="form-select" id="login-role" required>
+                                        <option value="customer" selected>Customer</option>
+                                        <option value="admin">Admin</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="login-username" class="form-label">Username</label>
+                                    <input type="text" class="form-control" id="login-username" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="login-password" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="login-password" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Log In</button>
+                                <p id="login-message" class="text-danger mt-3 d-none text-center">Invalid credentials or account type.</p>
+                            </form>
+                        </div>
+
+                        <div class="tab-pane fade" id="signup" role="tabpanel" aria-labelledby="signup-tab">
+                            <form id="signup-form-modal">
+                                <div class="mb-3">
+                                    <label for="signup-role" class="form-label">Account Type</label>
+                                    <select class="form-select" id="signup-role" required>
+                                        <option value="customer" selected>Customer</option>
+                                        <option value="admin">Admin</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="signup-username" class="form-label">New Username</label>
+                                    <input type="text" class="form-control" id="signup-username" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="signup-password" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="signup-password" required>
+                                </div>
+                                <button type="submit" class="btn btn-success w-100">Create Account</button>
+                                <p id="signup-message" class="text-danger mt-3 d-none text-center">Username already exists.</p>
+                                <p id="signup-success" class="text-success mt-3 d-none text-center">Account created! Please log in.</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/db.js"></script>
+    <script src="js/bootstrap.min.js"></script> <script src="js/app.js"></script> 
+</body>
+</html>
