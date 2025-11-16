@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Dashboard - Meal Planning</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">My Planner</a>
+            <span class="navbar-text me-auto text-light">Welcome, <span id="customer-name">User</span>!</span>
+            <button class="btn btn-outline-light" onclick="logout()">Logout</button>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h2>Weekly Meal Selection & Ordering</h2>
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        🍽️ **Available Meals (Drag these)**
+                    </div>
+                    <div class="card-body p-0">
+                        <ul class="list-group list-group-flush" id="available-meals-list">
+                            <li class="list-group-item text-muted">Loading meals...</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <div class="card">
+                    <div class="card-header bg-success text-white">
+                        🗓️ **Your Weekly Meal Plan (Drop Meals Here)**
+                    </div>
+                    <div class="card-body p-0">
+                        <div id="weekly-planner" class="list-group list-group-flush">
+                            <div class="list-group-item">
+                                <h5 class="mb-1">Monday</h5>
+                                <ul class="meal-drop-zone" data-day="Monday"></ul>
+                            </div>
+                            <div class="list-group-item">
+                                <h5 class="mb-1">Tuesday</h5>
+                                <ul class="meal-drop-zone" data-day="Tuesday"></ul>
+                            </div>
+                            <div class="list-group-item">
+                                <h5 class="mb-1">Wednesday</h5>
+                                <ul class="meal-drop-zone" data-day="Wednesday"></ul>
+                            </div>
+                            <div class="list-group-item">
+                                <h5 class="mb-1">Thursday</h5>
+                                <ul class="meal-drop-zone" data-day="Thursday"></ul>
+                            </div>
+                            <div class="list-group-item">
+                                <h5 class="mb-1">Friday</h5>
+                                <ul class="meal-drop-zone" data-day="Friday"></ul>
+                            </div>
+                            <div class="list-group-item">
+                                <h5 class="mb-1">Saturday</h5>
+                                <ul class="meal-drop-zone" data-day="Saturday"></ul>
+                            </div>
+                            <div class="list-group-item">
+                                <h5 class="mb-1">Sunday</h5>
+                                <ul class="meal-drop-zone" data-day="Sunday"></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div id="nutrition-summary">
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header bg-warning text-dark">
+                        Bulk Ordering Cart
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group mb-3" id="cart-list">
+                            <li class="list-group-item text-muted">Cart is empty.</li>
+                        </ul>
+                        <p class="h5">Total: $<span id="cart-total">0.00</span></p>
+                        <button class="btn btn-warning w-100" onclick="placeOrder()">Place Bulk Order</button>
+                        <p class="text-success mt-2 d-none" id="order-success-msg">Order placed successfully!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/db.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
